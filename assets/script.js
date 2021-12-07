@@ -34,12 +34,15 @@ document.getElementById('add-gb').addEventListener('click', function() {
 })
 
 document.getElementById('minus-gb').addEventListener('click', function() {
-    gb--
-    gb_row.textContent = gb;
-    c_total.textContent = (gb + cc + sugar);
     if(gb <= 0){
         gb = Math.min(0);
+    } else {
+        gb--
     }
+    
+    gb_row.textContent = gb;
+    c_total.textContent = (gb + cc + sugar);
+    
 })
 
 /**
@@ -54,14 +57,23 @@ document.getElementById('add-cc').addEventListener('click', function() {
     
 })
 
+// if cc is current 0
+// 
+
+// then
+//value of cc = 0
+
 // If - chocolate chip is pressed
 document.getElementById('minus-cc').addEventListener('click', function() {
-    cc--
-    cc_row.textContent = cc;
-    c_total.textContent = (gb + cc + sugar);
     if(cc <= 0){
         cc = Math.min(0);
+    } else {
+        cc--
     }
+    
+    cc_row.textContent = cc;
+    c_total.textContent = (gb + cc + sugar);
+    
 })
 
 /**
@@ -79,10 +91,13 @@ document.getElementById('add-sugar').addEventListener('click', function() {
 
 // - Sugar Sprinkle is pressed
 document.getElementById('minus-sugar').addEventListener('click', function() {
-    sugar--
-    sugar_row.textContent = sugar;
-    c_total.textContent = (gb + cc + sugar);
     if(sugar <= 0){
         sugar = Math.min(0);
+    } else {
+        sugar--
     }
+
+    sugar_row.textContent = sugar;
+    c_total.textContent = (gb + cc + sugar);
+   
 })
